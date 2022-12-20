@@ -43,7 +43,7 @@ OBJ_TEST=$(addprefix $(OBJ_DIR), $(SRC_TEST:.c=.o))
 all: s21_matrix.a
 rebuild: clean all
 clean:
-	@rm -f -- s21_matrix.a libs21_matrix.a test *.o $(OBJ) $(OBJ_TEST)
+	@rm -f -- s21_matrix.a libs21_matrix.a test debug *.o $(OBJ) $(OBJ_TEST)
 	@rm -rf -- gcov_report $(OBJ_DIR) $(wildcard *.dSYM *.gcno)
 
 # Library target
@@ -54,8 +54,9 @@ s21_matrix.a: $(OBJ)
 	@cp $@ lib$@
 
 # Test target
-
-build_test: CFLAGS += -D_GNU_SOURCE -ggdb3 -fsanitize=address -g
+# TODO Убрать флаг -fsanitize 
+# build_test: CFLAGS += -D_GNU_SOURCE -ggdb3 -fsanitize=address -g
+build_test: CFLAGS += -D_GNU_SOURCE -ggdb3
 build_test: $(OBJ_TEST) s21_matrix.a
 ifeq ($(UNAME), Linux)
 	$(CC) $^ $(CFLAGS) $(CPPFLAGS) -lcheck -lpthread -lsubunit -lrt -lm -o test
