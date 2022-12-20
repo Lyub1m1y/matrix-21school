@@ -7,10 +7,18 @@
 
 /* Macro */
 
+#ifndef OK
+#define OK 0  // OK
+#endif
+#ifndef ERROR
+#define ERROR 1  // Error, incorrect matrix
+#endif
+#ifndef ERROR_CALC
+#define ERROR_CALC 2  // Calculation error
+#endif
 #ifndef SUCCESS
 #define SUCCESS 1
 #endif
-
 #ifndef FAILURE
 #define FAILURE 0
 #endif

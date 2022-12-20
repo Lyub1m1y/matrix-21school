@@ -3,9 +3,9 @@
 void s21_remove_matrix(matrix_t *A) {
   int status = 0;
   //   if () {
-  //     status = SUCCESS;
+  //     status = OK;
   //   } else {
-  //     status = FAILURE;
+  //     status = ERROR;
   //   }
   return status;
 }

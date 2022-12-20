@@ -3,9 +3,9 @@
 int s21_determinant(matrix_t *A, double *result) {
   int status = 0;
   //   if () {
-  //     status = SUCCESS;
+  //     status = OK;
   //   } else {
-  //     status = FAILURE;
+  //     status = ERROR;
   //   }
   return status;
 }

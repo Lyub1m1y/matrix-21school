@@ -3,9 +3,9 @@
 int s21_inverse_matrix(matrix_t *A, matrix_t *result) {
   int status = 0;
   //   if () {
-  //     status = SUCCESS;
+  //     status = OK;
   //   } else {
-  //     status = FAILURE;
+  //     status = ERROR;
   //   }
   return status;
 }
