@@ -41,7 +41,7 @@
 *.su
 *.idb
 *.pdb
-.vscode
+*.vscode/
 **/.DS_Store
 
 # Kernel Module Compile Results

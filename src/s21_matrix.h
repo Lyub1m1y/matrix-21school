@@ -5,7 +5,13 @@
 /* Part 1. Implementation of the matrix.h library functions                   */
 /******************************************************************************/
 
-/* Macro */
+/* lib */
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Macros */
 
 #ifndef OK
 #define OK 0  // OK
