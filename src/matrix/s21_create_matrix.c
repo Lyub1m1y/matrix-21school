@@ -6,10 +6,10 @@ int s21_create_matrix(int rows, int columns, matrix_t *result) {
     status = OK;
     result->rows = rows;
     result->columns = columns;
-    result->matrix = (double **)malloc(rows * sizeof(double *));
+    result->matrix = (double **)calloc(rows, sizeof(double *));
     if (result->matrix != NULL) {
       for (int i = 0; (i < rows) && (status != ERROR); i++) {
-        result->matrix[i] = (double *)malloc(columns * sizeof(double));
+        result->matrix[i] = (double *)calloc(columns, sizeof(double));
         if (result->matrix[i] == NULL) {
           status = ERROR;
         }
