@@ -39,10 +39,24 @@ START_TEST(test_s21_sum_matrix_2) {
 }
 END_TEST
 
+START_TEST(test_s21_sum_matrix_3) {
+  matrix_t temp;
+  matrix_t temp2;
+  matrix_t result;
+  s21_create_matrix(3, 1, &temp);
+  s21_create_matrix(3, 3, &temp2);
+  s21_gen_matrix(&temp);
+  s21_gen_matrix(&temp2);
+  ck_assert_int_eq(s21_sum_matrix(&temp, &temp2, &result), ERROR_CALC);
+  s21_remove_matrix(&temp);
+  s21_remove_matrix(&temp2);
+}
+END_TEST
+
 TCase *tcase_matrix_s21_sum_matrix() {
   TCase *tcase = tcase_create("matrix_s21_sum_matrix");
   tcase_add_test(tcase, test_s21_sum_matrix_1);
   tcase_add_test(tcase, test_s21_sum_matrix_2);
-  // tcase_add_test(tcase, test_21_sum_matrix_3);
+  tcase_add_test(tcase, test_s21_sum_matrix_3);
   return tcase;
 }
