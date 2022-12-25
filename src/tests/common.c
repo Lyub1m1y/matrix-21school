@@ -25,20 +25,3 @@ void s21_fill(matrix_t *matrixStruct, double value) {
     }
   }
 }
-
-// TODO удавлить комменты
-// matrix_t init_matrix(int rows, int columns) {
-//   matrix_t m;
-//   m.rows = rows;
-//   m.columns = columns;
-//   m.matrix = NULL;
-//   return m;
-// }
-
-// void fill_matrix_increment(matrix_t *matrix, int value) {
-//   for (int i = 0; i < matrix->rows; i++) {
-//     for (int j = 0; j < matrix->columns; j++) {
-//       matrix->matrix[i][j] = value++;
-//     }
-//   }
-// }

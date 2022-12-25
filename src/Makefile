@@ -54,9 +54,8 @@ s21_matrix.a: $(OBJ)
 	@cp $@ lib$@
 
 # Test target
-# TODO Убрать флаг -fsanitize 
-build_test: CFLAGS += -D_GNU_SOURCE -ggdb3 -fsanitize=address -g
-# build_test: CFLAGS += -D_GNU_SOURCE -ggdb3
+# build_test: CFLAGS += -D_GNU_SOURCE -ggdb3 -fsanitize=address -g
+build_test: CFLAGS += -D_GNU_SOURCE -ggdb3
 build_test: $(OBJ_TEST) s21_matrix.a
 ifeq ($(UNAME), Linux)
 	$(CC) $^ $(CFLAGS) $(CPPFLAGS) -lcheck -lpthread -lsubunit -lrt -lm -o test
