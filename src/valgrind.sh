@@ -11,3 +11,4 @@ valgrind --quiet \
     -- ./test
 # valgrind -q --trace-children=yes --track-fds=yes --track-origins=yes --leak-check=full --show-leak-kinds=all ./test
 # cat valgrind.log
+make clean
