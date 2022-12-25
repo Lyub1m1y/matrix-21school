@@ -18,6 +18,14 @@ void s21_anti_gen_matrix(matrix_t *A) {
   }
 }
 
+void s21_fill(matrix_t *matrixStruct, double value) {
+  for (int i = 0; i < matrixStruct->rows; i++) {
+    for (int j = 0; j < matrixStruct->columns; j++) {
+      matrixStruct->matrix[i][j] = value;
+    }
+  }
+}
+
 // TODO удавлить комменты
 // matrix_t init_matrix(int rows, int columns) {
 //   matrix_t m;
